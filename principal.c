@@ -11,6 +11,7 @@
 
 int main(void)
 {
+  long long int number;
   size_t index;
   clock_t start, stop;
   double cpu_time = 0;
@@ -41,7 +42,7 @@ int main(void)
 
     /*Realizamos el calculo recursivamente*/
     start = clock();
-    Sequences_rfibo(index);
+    number = Sequences_rfibo(index);
     stop = clock();
 
     cpu_time = ((double)(stop-start))/CLOCKS_PER_SEC;
