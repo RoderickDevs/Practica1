@@ -35,9 +35,9 @@ int main(void)
 
     /*Guardamos el los valores en la matriz*/
     buffer_matrix[index][INDEX] = index;
-    buffer_matrix[index][ITERATIVE] = cpu_time*1e3;
+    buffer_matrix[index][ITERATIVE] = cpu_time*1e6;
 
-    printf("Sequential Fibo Time: %f ms\n",cpu_time*1e3);
+    printf("Sequential Fibo Time: %f micro s\n",cpu_time*1e6);
 
 
     /*Realizamos el calculo recursivamente*/
