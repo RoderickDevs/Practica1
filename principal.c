@@ -3,7 +3,7 @@
 #include"Sequences.h"
 #include"files.h"
 
-#define AMOUNT 2000
+#define AMOUNT 45
 
 #define INDEX 0
 #define ITERATIVE 1
@@ -11,7 +11,6 @@
 
 int main(void)
 {
-  long long int number_to_print;
   size_t index;
   clock_t start, stop;
   double cpu_time = 0;
@@ -35,22 +34,22 @@ int main(void)
 
     /*Guardamos el los valores en la matriz*/
     buffer_matrix[index][INDEX] = index;
-    buffer_matrix[index][ITERATIVE] = cpu_time*1e9;
+    buffer_matrix[index][ITERATIVE] = cpu_time*1e3;
 
-    printf("Sequential Fibo Time: %f ms\n",cpu_time*1e9);
+    printf("Sequential Fibo Time: %f ms\n",cpu_time*1e3);
 
 
     /*Realizamos el calculo recursivamente*/
-    /*start = clock();
+    start = clock();
     Sequences_rfibo(index);
     stop = clock();
 
-    cpu_time = ((double)(stop-start))/CLOCKS_PER_SEC;*/
+    cpu_time = ((double)(stop-start))/CLOCKS_PER_SEC;
 
     /*Guardamos el los valores en la matriz*/
-    /*buffer_matrix[index][RECURSIVE] = cpu_time;
+    buffer_matrix[index][RECURSIVE] = cpu_time;
     
-      printf("Recursive Fibo Time: %f ms\n",cpu_time);*/
+    printf("Recursive Fibo Time: %f s\n",cpu_time);
 
     printf("\n\n");
     
